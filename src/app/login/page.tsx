@@ -138,7 +138,7 @@ export default function LoginPage() {
           </div>
           <h2 className="text-3xl font-bold">Your Privacy, Our Priority</h2>
           <p className="mt-4 text-teal-100 leading-relaxed">
-            MindBridge uses end-to-end encryption and zero-knowledge architecture.
+            MindNest uses end-to-end encryption and zero-knowledge architecture.
             We never store your real identity. Not even we know who you are.
           </p>
           <div className="mt-8 grid grid-cols-3 gap-4">

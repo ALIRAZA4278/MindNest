@@ -148,7 +148,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-xs font-semibold text-slate-700">50k+ Users</p>
-                    <p className="text-[10px] text-slate-400">Trust MindBridge</p>
+                    <p className="text-[10px] text-slate-400">Trust MindNest</p>
                   </div>
                 </div>
               </div>
@@ -333,7 +333,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                text: "I was afraid to talk to anyone about my anxiety. MindBridge gave me a safe space where I didn't have to pretend. My therapist truly understood me.",
+                text: "I was afraid to talk to anyone about my anxiety. MindNest gave me a safe space where I didn't have to pretend. My therapist truly understood me.",
                 alias: "Anonymous User #4821",
                 detail: "Anxiety & Stress",
                 rating: 5,

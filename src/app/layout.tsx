@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "MindBridge - Anonymous Therapy & Mental Health Support",
+  title: "MindNest - Anonymous Therapy & Mental Health Support",
   description:
     "Connect anonymously with certified therapists through chat or voice. Safe, private, judgment-free mental health support.",
 };

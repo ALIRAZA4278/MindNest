@@ -45,7 +45,7 @@ const plans = [
     name: "Premium",
     price: "$29",
     period: "per month",
-    description: "Full access to everything MindBridge offers.",
+    description: "Full access to everything MindNest offers.",
     color: "border-teal-500 ring-2 ring-teal-500/20",
     badge: "Most Popular",
     buttonStyle: "bg-teal-600 hover:bg-teal-700 text-white",
@@ -104,7 +104,7 @@ const faqs = [
   },
   {
     q: "Are the therapists really licensed?",
-    a: "Every therapist on MindBridge undergoes credential verification — including license number, board certifications, and background checks — before they can accept sessions.",
+    a: "Every therapist on MindNest undergoes credential verification — including license number, board certifications, and background checks — before they can accept sessions.",
   },
   {
     q: "How does the Institutional plan work?",

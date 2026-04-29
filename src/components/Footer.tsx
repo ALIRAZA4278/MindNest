@@ -66,7 +66,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-slate-500">
-            &copy; {new Date().getFullYear()} MindBridge. All rights reserved.
+            &copy; {new Date().getFullYear()} MindNest. All rights reserved.
           </p>
           <p className="text-sm text-slate-500 flex items-center gap-1">
             Made with <Heart className="w-4 h-4 text-red-400 fill-red-400" /> for mental health awareness
