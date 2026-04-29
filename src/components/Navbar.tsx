@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, Shield } from "lucide-react";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -12,13 +13,15 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-teal-500 to-purple-600 flex items-center justify-center">
-              <Shield className="w-5 h-5 text-white" />
-            </div>
-            <span className="text-xl font-bold text-slate-800">
-              Mind<span className="text-teal-600">Bridge</span>
-            </span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo.png"
+              alt="MindNest"
+              width={130}
+              height={48}
+              className="h-10 w-auto"
+              style={{ filter: "brightness(0) saturate(100%) invert(47%) sepia(87%) saturate(484%) hue-rotate(139deg) brightness(91%) contrast(90%)" }}
+            />
           </Link>
 
           {/* Desktop Nav */}

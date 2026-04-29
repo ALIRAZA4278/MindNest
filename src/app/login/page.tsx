@@ -3,7 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Shield, Eye, EyeOff, ArrowRight, Lock } from "lucide-react";
+import Image from "next/image";
+import { Eye, EyeOff, ArrowRight, Lock } from "lucide-react";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -21,13 +22,15 @@ export default function LoginPage() {
       <div className="flex-1 flex items-center justify-center px-4 py-12">
         <div className="w-full max-w-md">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 mb-8">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-teal-500 to-purple-600 flex items-center justify-center">
-              <Shield className="w-5 h-5 text-white" />
-            </div>
-            <span className="text-xl font-bold text-slate-800">
-              Mind<span className="text-teal-600">Bridge</span>
-            </span>
+          <Link href="/" className="flex items-center mb-8">
+            <Image
+              src="/logo.png"
+              alt="MindNest"
+              width={130}
+              height={48}
+              className="h-10 w-auto"
+              style={{ filter: "brightness(0) saturate(100%) invert(47%) sepia(87%) saturate(484%) hue-rotate(139deg) brightness(91%) contrast(90%)" }}
+            />
           </Link>
 
           <h1 className="text-3xl font-bold text-slate-900">Welcome back</h1>
@@ -133,8 +136,8 @@ export default function LoginPage() {
           <div className="absolute bottom-20 left-20 w-80 h-80 bg-purple-400/10 rounded-full blur-3xl" />
         </div>
         <div className="relative text-center text-white max-w-md">
-          <div className="w-20 h-20 rounded-2xl bg-white/10 backdrop-blur-sm flex items-center justify-center mx-auto mb-8">
-            <Shield className="w-10 h-10 text-white" />
+          <div className="flex justify-center mb-8">
+            <Image src="/logo.png" alt="MindNest" width={160} height={60} className="h-14 w-auto opacity-90" />
           </div>
           <h2 className="text-3xl font-bold">Your Privacy, Our Priority</h2>
           <p className="mt-4 text-teal-100 leading-relaxed">

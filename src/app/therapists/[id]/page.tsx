@@ -2,6 +2,7 @@
 
 import { use } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowLeft,
   Star,
@@ -10,11 +11,11 @@ import {
   Clock,
   Award,
   Globe,
-  Shield,
   Calendar,
   Check,
   Heart,
   BookOpen,
+  Shield,
 } from "lucide-react";
 
 const therapistData: Record<
@@ -141,10 +142,15 @@ export default function TherapistProfilePage({
               <ArrowLeft className="w-5 h-5" />
               <span className="text-sm font-medium">Back</span>
             </Link>
-            <Link href="/dashboard" className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-teal-500 to-purple-600 flex items-center justify-center">
-                <Shield className="w-4 h-4 text-white" />
-              </div>
+            <Link href="/dashboard" className="flex items-center">
+              <Image
+                src="/logo.png"
+                alt="MindNest"
+                width={100}
+                height={36}
+                className="h-8 w-auto"
+                style={{ filter: "brightness(0) saturate(100%) invert(47%) sepia(87%) saturate(484%) hue-rotate(139deg) brightness(91%) contrast(90%)" }}
+              />
             </Link>
           </div>
         </div>

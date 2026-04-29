@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Shield, Heart } from "lucide-react";
+import Image from "next/image";
+import { Heart } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -8,13 +9,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-teal-500 to-purple-600 flex items-center justify-center">
-                <Shield className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-white">
-                Mind<span className="text-teal-400">Bridge</span>
-              </span>
+            <div className="mb-4">
+              <Image
+                src="/logo.png"
+                alt="MindNest"
+                width={130}
+                height={48}
+                className="h-10 w-auto opacity-90"
+              />
             </div>
             <p className="text-sm text-slate-400 leading-relaxed">
               Anonymous, safe, and professional mental health support. Connect with
