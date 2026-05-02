@@ -174,7 +174,7 @@ export default function ChatPage({
       </div>
 
       {/* Messages Area */}
-      <div className="flex-1 overflow-y-auto px-4 py-6 space-y-4">
+      <div className="flex-1 overflow-y-auto px-4 py-6 space-y-4 cursor-default">
         {/* Session Start Notice */}
         <div className="flex justify-center mb-4">
           <div className="bg-white border border-slate-100 rounded-full px-4 py-1.5 flex items-center gap-2">
@@ -259,7 +259,7 @@ export default function ChatPage({
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleKeyDown}
               placeholder="Type your message..."
-              className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent pr-12"
+              className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent pr-12 cursor-text"
             />
             <button className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600">
               <Smile className="w-5 h-5" />
