@@ -19,6 +19,12 @@ import {
   Users,
   Award,
   Headphones,
+  Bot,
+  Brain,
+  Zap,
+  AlertTriangle,
+  ScanFace,
+  Shuffle,
 } from "lucide-react";
 
 export default function Home() {
@@ -200,36 +206,42 @@ export default function Home() {
                 title: "Complete Anonymity",
                 desc: "No personal information required. Use a random alias and connect without revealing your real identity.",
                 color: "from-teal-500 to-teal-600",
+                badge: null,
               },
               {
                 icon: MessageCircle,
                 title: "Secure Chat",
                 desc: "Text-based therapy sessions with end-to-end encryption. Express yourself at your own pace.",
                 color: "from-blue-500 to-blue-600",
+                badge: null,
               },
               {
                 icon: Phone,
                 title: "Voice Sessions",
                 desc: "When typing isn't enough, connect via voice with your therapist. Voice is anonymized for extra privacy.",
                 color: "from-purple-500 to-purple-600",
+                badge: null,
               },
               {
                 icon: UserCheck,
                 title: "Certified Therapists",
                 desc: "All therapists are licensed, verified professionals with years of experience in mental health.",
                 color: "from-green-500 to-green-600",
+                badge: null,
               },
               {
                 icon: Lock,
                 title: "Bank-Level Security",
                 desc: "256-bit AES encryption, HIPAA compliant, zero-knowledge architecture. Your data stays yours.",
                 color: "from-orange-500 to-orange-600",
+                badge: null,
               },
               {
                 icon: Clock,
                 title: "Available 24/7",
                 desc: "Mental health doesn't follow a schedule. Connect with a therapist anytime, day or night.",
                 color: "from-pink-500 to-pink-600",
+                badge: null,
               },
             ].map((feature) => (
               <div
@@ -247,6 +259,166 @@ export default function Home() {
                 <p className="text-slate-500 text-sm leading-relaxed">{feature.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== AI FEATURES ===== */}
+      <section id="ai-features" className="py-20 md:py-28 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-teal-50 to-purple-50 border border-teal-200 rounded-full px-4 py-1.5 mb-4">
+              <Sparkles className="w-4 h-4 text-teal-600" />
+              <span className="text-sm font-semibold text-teal-700 uppercase tracking-wider">Powered by AI</span>
+            </div>
+            <h2 className="mt-2 text-3xl md:text-4xl font-bold text-slate-900">
+              Intelligent Support, <span className="bg-gradient-to-r from-teal-600 to-purple-600 bg-clip-text text-transparent">Always There</span>
+            </h2>
+            <p className="mt-4 text-slate-600 leading-relaxed">
+              Our AI layer works silently in the background — understanding your emotions,
+              matching you with the right therapist, and flagging when you need urgent help.
+            </p>
+          </div>
+
+          {/* AI Chatbot Hero Card */}
+          <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 md:p-12 mb-10 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl" />
+            <div className="relative grid md:grid-cols-2 gap-10 items-center">
+              <div>
+                <div className="inline-flex items-center gap-2 bg-teal-500/20 border border-teal-500/30 rounded-full px-4 py-1.5 mb-5">
+                  <span className="w-2 h-2 bg-teal-400 rounded-full animate-pulse" />
+                  <span className="text-sm font-medium text-teal-300">AI Assistant • Online 24/7</span>
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                  AI Chatbot — Your First Step to Healing
+                </h3>
+                <p className="text-slate-300 leading-relaxed mb-6">
+                  Before connecting with a human therapist, our AI assistant is available around the clock.
+                  It handles mild stress and anxiety cases, guides you through breathing exercises, and
+                  prepares you for your first real session — completely anonymously.
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  {["Instant responses", "Judgment-free", "Crisis detection", "Always available"].map((tag) => (
+                    <span key={tag} className="text-xs bg-white/10 text-slate-300 px-3 py-1.5 rounded-full border border-white/10">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Chat Demo */}
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5">
+                <div className="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+                  <div className="w-9 h-9 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center">
+                    <Bot className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-white">MindNest AI</p>
+                    <p className="text-xs text-teal-400 flex items-center gap-1">
+                      <span className="w-1.5 h-1.5 bg-teal-400 rounded-full" />
+                      Always online
+                    </p>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <div className="bg-white/10 rounded-2xl rounded-tl-sm px-4 py-3 max-w-[85%]">
+                    <p className="text-sm text-slate-200">Hi, I&apos;m here for you. How are you feeling today?</p>
+                  </div>
+                  <div className="bg-teal-500/30 border border-teal-500/20 rounded-2xl rounded-tr-sm px-4 py-3 max-w-[85%] ml-auto">
+                    <p className="text-sm text-slate-200">I&apos;ve been really stressed at work...</p>
+                  </div>
+                  <div className="bg-white/10 rounded-2xl rounded-tl-sm px-4 py-3 max-w-[85%]">
+                    <p className="text-sm text-slate-200">I understand. Work stress is very real. Let&apos;s try a quick breathing exercise together...</p>
+                  </div>
+                </div>
+                <div className="mt-4 flex items-center gap-2 bg-white/5 rounded-full px-4 py-2.5">
+                  <EyeOff className="w-4 h-4 text-slate-500" />
+                  <span className="text-xs text-slate-500">Your identity is protected</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 4 AI Feature Cards */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                icon: ScanFace,
+                color: "from-violet-500 to-purple-600",
+                bg: "bg-violet-50",
+                title: "Sentiment Analysis",
+                desc: "Every message is analyzed in real-time to detect signs of depression, anxiety, or emotional distress. The AI reads between the lines so your therapist is always prepared.",
+                tags: ["Depression signals", "Mood trends", "Emotional patterns"],
+              },
+              {
+                icon: Shuffle,
+                color: "from-teal-500 to-cyan-600",
+                bg: "bg-teal-50",
+                title: "AI Therapist Matching",
+                desc: "Our algorithm matches you with the best therapist based on your issue type, severity, preferred language, and communication style — not just availability.",
+                tags: ["Issue-based", "Language match", "Severity scored"],
+              },
+              {
+                icon: Brain,
+                color: "from-blue-500 to-indigo-600",
+                bg: "bg-blue-50",
+                title: "AI Self-Help Engine",
+                desc: "Based on your mood history and session notes, the AI curates personalized exercises: breathing techniques, journaling prompts, guided meditations, and more.",
+                tags: ["Exercises", "Journaling", "Meditation"],
+              },
+              {
+                icon: AlertTriangle,
+                color: "from-rose-500 to-red-600",
+                bg: "bg-rose-50",
+                title: "Risk Detection System",
+                desc: "When the AI detects high-risk language — suicidal signals, severe distress, crisis indicators — it immediately flags the case and routes the user to a priority session.",
+                tags: ["Suicidal signals", "Crisis flags", "Priority routing"],
+              },
+            ].map((item) => (
+              <div key={item.title} className="bg-white rounded-2xl border border-slate-100 p-6 hover:shadow-lg hover:shadow-slate-100 transition-all group">
+                <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                  <item.icon className="w-6 h-6 text-white" />
+                </div>
+                <div className="flex items-center gap-2 mb-2">
+                  <h3 className="font-semibold text-slate-800 text-sm">{item.title}</h3>
+                  <span className="text-[10px] bg-teal-50 text-teal-600 border border-teal-100 px-2 py-0.5 rounded-full font-semibold">AI</span>
+                </div>
+                <p className="text-xs text-slate-500 leading-relaxed mb-4">{item.desc}</p>
+                <div className="flex flex-wrap gap-1.5">
+                  {item.tags.map((tag) => (
+                    <span key={tag} className="text-[10px] bg-slate-100 text-slate-500 px-2 py-0.5 rounded-full">{tag}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* AI Flow Banner */}
+          <div className="mt-10 bg-gradient-to-r from-teal-50 to-purple-50 border border-teal-100 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-teal-500 to-purple-600 flex items-center justify-center shrink-0">
+                <Zap className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <p className="font-semibold text-slate-800">How the AI Layer Works</p>
+                <div className="flex flex-wrap items-center gap-2 mt-1 text-xs text-slate-500">
+                  {["You message", "→", "AI reads sentiment", "→", "Matches therapist", "→", "Flags risks", "→", "Session starts"].map((step, i) => (
+                    <span key={i} className={step === "→" ? "text-teal-400 font-bold" : "bg-white border border-slate-200 px-2 py-0.5 rounded-full"}>
+                      {step}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <Link
+              href="/signup"
+              className="shrink-0 flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold text-sm px-5 py-2.5 rounded-full transition-colors"
+            >
+              Try It Free
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>
